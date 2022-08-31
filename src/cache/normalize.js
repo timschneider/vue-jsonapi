@@ -3,6 +3,7 @@ import { mapOrCall, omit, pick, isGetter, assignPropertyDescriptor } from '../ut
 export const normalize = (ctx, record) => {
   const model = {
     __type: record.type,
+    __links: record.links,
     id: record.id,
     ...record.attributes,
   }
